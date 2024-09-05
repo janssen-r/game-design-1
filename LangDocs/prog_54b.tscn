@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://blqqk5lsmb5q7"]
+
+[ext_resource type="Script" path="res://prog_54b.gd" id="1_eigq0"]
+[ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="2_ufsge"]
+
+[node name="Prog_54b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eigq0")
+
+[node name="txtNum1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 62.0
+offset_right = 219.0
+offset_bottom = 173.0
+theme = ExtResource("2_ufsge")
+placeholder_text = "--"
+alignment = 1
+
+[node name="txtNum2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 62.0
+offset_right = 430.0
+offset_bottom = 173.0
+theme = ExtResource("2_ufsge")
+placeholder_text = "--"
+alignment = 1
+
+[node name="txtNum3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 64.0
+offset_right = 649.0
+offset_bottom = 175.0
+theme = ExtResource("2_ufsge")
+placeholder_text = "--"
+alignment = 1
+
+[node name="txtNum4" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 687.0
+offset_top = 67.0
+offset_right = 871.0
+offset_bottom = 178.0
+theme = ExtResource("2_ufsge")
+placeholder_text = "--"
+alignment = 1
+
+[node name="txtNum5" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 916.0
+offset_top = 62.0
+offset_right = 1100.0
+offset_bottom = 173.0
+theme = ExtResource("2_ufsge")
+placeholder_text = "--"
+alignment = 1
