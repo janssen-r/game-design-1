@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccj8ct70x1f1s"]
+
+[ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="1_304lu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5h7xd"]
+font_size = 60
+
+[node name="prog_54c" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="txtRad" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 124.0
+offset_right = 452.0
+offset_bottom = 215.0
+theme = ExtResource("1_304lu")
+placeholder_text = "--"
+alignment = 1
+
+[node name="lblRad" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 109.0
+offset_right = 231.0
+offset_bottom = 212.0
+text = "Radius:"
+label_settings = SubResource("LabelSettings_5h7xd")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="lblArea" type="Label" parent="."]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 234.0
+offset_right = 744.0
+offset_bottom = 337.0
+text = "Area: "
+label_settings = SubResource("LabelSettings_5h7xd")
+vertical_alignment = 1
+
+[node name="lblCirc" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 303.0
+offset_right = 710.0
+offset_bottom = 406.0
+text = "Circumference:"
+label_settings = SubResource("LabelSettings_5h7xd")
+vertical_alignment = 1
