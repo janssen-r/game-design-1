@@ -9,7 +9,9 @@ func _on_btn_calc_pressed() -> void:
 	
 
 func _on_btn_clear_pressed() -> void:
-	$lblFine.text = "$"
+	$lblTotal.text = "$"
+	$txtLimit.text = ""
+	$txtSpeed.text = ""
 
 func _on_btn_exit_pressed() -> void:
 	get_tree().quit()

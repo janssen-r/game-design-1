@@ -55,3 +55,34 @@ offset_bottom = 406.0
 text = "Circumference:"
 label_settings = SubResource("LabelSettings_5h7xd")
 vertical_alignment = 1
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 494.0
+offset_right = 331.0
+offset_bottom = 616.0
+theme = ExtResource("1_304lu")
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 496.0
+offset_right = 694.0
+offset_bottom = 618.0
+theme = ExtResource("1_304lu")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 493.0
+offset_right = 1065.0
+offset_bottom = 615.0
+theme = ExtResource("1_304lu")
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
