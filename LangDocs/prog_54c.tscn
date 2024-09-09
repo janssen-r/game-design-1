@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccj8ct70x1f1s"]
+[gd_scene load_steps=4 format=3 uid="uid://ccj8ct70x1f1s"]
 
 [ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="1_304lu"]
+[ext_resource type="Script" path="res://LangDocs/prog_54c.gd" id="1_yqo1t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5h7xd"]
 font_size = 60
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yqo1t")
 
 [node name="txtRad" type="LineEdit" parent="."]
 layout_mode = 0
