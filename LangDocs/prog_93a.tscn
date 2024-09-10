@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv5fvuofbtrlc"]
+
+[ext_resource type="Script" path="res://LangDocs/prog_93a.gd" id="1_v7n01"]
+[ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="2_skga2"]
+
+[node name="Prog93a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v7n01")
+
+[node name="lblKwh" type="Label" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 34.0
+offset_right = 337.0
+offset_bottom = 111.0
+theme = ExtResource("2_skga2")
+text = "KWH Used:"
+
+[node name="txtKwh" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 19.0
+offset_right = 593.0
+offset_bottom = 124.0
+theme = ExtResource("2_skga2")
+placeholder_text = "--"
+alignment = 1
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 536.0
+offset_right = 328.0
+offset_bottom = 628.0
+theme = ExtResource("2_skga2")
+text = "Calculate"
+
+[node name="btnCalc2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 534.0
+offset_right = 706.0
+offset_bottom = 626.0
+theme = ExtResource("2_skga2")
+text = "Clear"
+
+[node name="btnCalc3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 535.0
+offset_right = 1068.0
+offset_bottom = 627.0
+theme = ExtResource("2_skga2")
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnCalc2" to="." method="_on_btn_calc_2_pressed"]
+[connection signal="pressed" from="btnCalc3" to="." method="_on_btn_calc_3_pressed"]
