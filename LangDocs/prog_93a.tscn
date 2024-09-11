@@ -58,6 +58,51 @@ offset_bottom = 627.0
 theme = ExtResource("2_skga2")
 text = "Exit"
 
+[node name="lblBase" type="Label" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 146.0
+offset_right = 469.0
+offset_bottom = 227.0
+theme = ExtResource("2_skga2")
+text = "Base Cost:"
+
+[node name="lblSur" type="Label" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 217.0
+offset_right = 460.0
+offset_bottom = 298.0
+theme = ExtResource("2_skga2")
+text = "Surcharge:"
+
+[node name="lblTax" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 286.0
+offset_right = 512.0
+offset_bottom = 367.0
+theme = ExtResource("2_skga2")
+text = "City Tax: "
+
+[node name="lblTotal" type="Label" parent="."]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 347.0
+offset_right = 803.0
+offset_bottom = 428.0
+theme = ExtResource("2_skga2")
+text = "Total:"
+
+[node name="lblPenalty" type="Label" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 403.0
+offset_right = 726.0
+offset_bottom = 484.0
+theme = ExtResource("2_skga2")
+text = "After May 20th:"
+
 [connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
 [connection signal="pressed" from="btnCalc2" to="." method="_on_btn_calc_2_pressed"]
 [connection signal="pressed" from="btnCalc3" to="." method="_on_btn_calc_3_pressed"]
