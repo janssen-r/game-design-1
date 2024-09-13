@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmlsfww74xs4j"]
+
+[ext_resource type="Script" path="res://lp_4_1.gd" id="1_1u07w"]
+[ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="1_u6kj5"]
+
+[node name="LP 4-1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1u07w")
+
+[node name="lblCopies" type="Label" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 51.0
+offset_right = 519.0
+offset_bottom = 134.0
+theme = ExtResource("1_u6kj5")
+text = "# of copies:"
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 165.0
+offset_right = 1095.0
+offset_bottom = 454.0
+theme = ExtResource("1_u6kj5")
+text = "Price per copy:
+Total cost: "
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 493.0
+offset_right = 354.0
+offset_bottom = 627.0
+theme = ExtResource("1_u6kj5")
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 485.0
+offset_right = 724.0
+offset_bottom = 619.0
+theme = ExtResource("1_u6kj5")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 489.0
+offset_right = 1092.0
+offset_bottom = 623.0
+theme = ExtResource("1_u6kj5")
+text = "Exit"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 48.0
+offset_right = 609.0
+offset_bottom = 131.0
+theme = ExtResource("1_u6kj5")
+placeholder_text = "--"
+alignment = 1
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
