@@ -26,7 +26,10 @@ func _on_btn_calc_pressed() -> void:
 
 func _on_btn_clear_pressed() -> void:
 	$lblOutput.text = ""
-	$txtHight.text
+	$txtHeight.text = ""
+	$txtWidth.text = ""
+	$txtLength.text = ""
+	$txtWeight.text = ""
 
 func _on_btn_exit_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()

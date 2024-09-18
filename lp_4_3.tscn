@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://nkla8bif6d84"]
+
+[ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="1_ps3yh"]
+
+[node name="lp_4_3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="txtEggNum" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 12.0
+offset_right = 679.0
+offset_bottom = 108.0
+theme = ExtResource("1_ps3yh")
+placeholder_text = "--"
+alignment = 1
+
+[node name="lblEggNum" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 30.0
+offset_right = 393.0
+offset_bottom = 121.0
+theme = ExtResource("1_ps3yh")
+text = "Number of eggs:"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 144.0
+offset_right = 556.0
+offset_bottom = 228.0
+theme = ExtResource("1_ps3yh")
+text = "Price:"
+
+[node name="btnCalc" type="Button" parent="."]
+offset_left = 20.0
+offset_top = 501.0
+offset_right = 364.0
+offset_bottom = 625.0
+theme = ExtResource("1_ps3yh")
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+offset_left = 402.0
+offset_top = 501.0
+offset_right = 746.0
+offset_bottom = 625.0
+theme = ExtResource("1_ps3yh")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+offset_left = 789.0
+offset_top = 504.0
+offset_right = 1133.0
+offset_bottom = 628.0
+theme = ExtResource("1_ps3yh")
+text = "Exit"
