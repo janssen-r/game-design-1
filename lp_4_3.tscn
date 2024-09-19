@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://nkla8bif6d84"]
+[gd_scene load_steps=3 format=3 uid="uid://nkla8bif6d84"]
 
 [ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="1_ps3yh"]
+[ext_resource type="Script" path="res://lp_4_3.gd" id="1_qkro4"]
 
 [node name="lp_4_3" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qkro4")
 
 [node name="txtEggNum" type="LineEdit" parent="."]
 layout_mode = 0
@@ -29,7 +31,7 @@ offset_bottom = 121.0
 theme = ExtResource("1_ps3yh")
 text = "Number of eggs:"
 
-[node name="Label" type="Label" parent="."]
+[node name="lblPrice" type="Label" parent="."]
 layout_mode = 0
 offset_left = 178.0
 offset_top = 144.0
@@ -39,6 +41,7 @@ theme = ExtResource("1_ps3yh")
 text = "Price:"
 
 [node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 501.0
 offset_right = 364.0
@@ -47,6 +50,7 @@ theme = ExtResource("1_ps3yh")
 text = "Calculate"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 402.0
 offset_top = 501.0
 offset_right = 746.0
@@ -55,9 +59,14 @@ theme = ExtResource("1_ps3yh")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 789.0
 offset_top = 504.0
 offset_right = 1133.0
 offset_bottom = 628.0
 theme = ExtResource("1_ps3yh")
 text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
