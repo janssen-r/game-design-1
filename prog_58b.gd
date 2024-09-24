@@ -4,8 +4,8 @@ func _on_btn_calc_pressed() -> void:
 	var numA = int($txtA.text)
 	var numB = int($txtB.text)
 	var numC = int($txtC.text)
-	var root1 = (-numB + (numB**2 - 4 * numA * numC)**(1/2) / 2*numA)
-	var root2 = (-numB - (numB**2 - 4 * numA * numC)**(1/2) / 2*numA)
+	var root1 = (-numB + (sqrt(numB**2 - 4 * numA * numC) / 2 * numA))
+	var root2 = (-numB - (sqrt(numB**2 - 4 * numA * numC) / 2 * numA))
 	
 	$lblOutput.text = "The roots are: " + str(root1) + " & " + str(root2)
 
