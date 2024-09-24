@@ -1,0 +1,115 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxa5pab2rnbip"]
+
+[ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="1_c61qu"]
+[ext_resource type="Script" path="res://prog_58b.gd" id="1_na1av"]
+
+[node name="prog_58b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_na1av")
+
+[node name="btn_calc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 522.0
+offset_right = 321.0
+offset_bottom = 633.0
+theme = ExtResource("1_c61qu")
+text = "Calculate"
+
+[node name="btn_clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 526.0
+offset_right = 727.0
+offset_bottom = 632.0
+theme = ExtResource("1_c61qu")
+text = "Clear"
+
+[node name="btn_exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 522.0
+offset_right = 1129.0
+offset_bottom = 632.0
+theme = ExtResource("1_c61qu")
+text = "Exit"
+
+[node name="txtA" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 31.0
+offset_right = 380.0
+offset_bottom = 132.0
+theme = ExtResource("1_c61qu")
+placeholder_text = "--"
+alignment = 1
+
+[node name="txtB" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 148.0
+offset_right = 382.0
+offset_bottom = 249.0
+theme = ExtResource("1_c61qu")
+placeholder_text = "--"
+alignment = 1
+
+[node name="txtC" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 275.0
+offset_right = 382.0
+offset_bottom = 376.0
+theme = ExtResource("1_c61qu")
+placeholder_text = "--"
+alignment = 1
+
+[node name="lblA" type="Label" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 36.0
+offset_right = 153.0
+offset_bottom = 122.0
+theme = ExtResource("1_c61qu")
+text = "A:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="lblB" type="Label" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 153.0
+offset_right = 153.0
+offset_bottom = 239.0
+theme = ExtResource("1_c61qu")
+text = "B:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="lblC" type="Label" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 280.0
+offset_right = 153.0
+offset_bottom = 366.0
+theme = ExtResource("1_c61qu")
+text = "C:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="lblOutput" type="Label" parent="."]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 37.0
+offset_right = 1102.0
+offset_bottom = 457.0
+theme = ExtResource("1_c61qu")
+
+[connection signal="pressed" from="btn_calc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btn_clear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]
