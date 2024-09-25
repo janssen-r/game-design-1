@@ -1,0 +1,89 @@
+[gd_scene load_steps=3 format=3 uid="uid://h7m4fxe4xabx"]
+
+[ext_resource type="Script" path="res://prog_52a_func.gd" id="1_bwbgn"]
+[ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="2_0c58h"]
+
+[node name="prog_52aFunc" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bwbgn")
+
+[node name="lblLength" type="Label" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 44.0
+offset_right = 230.0
+offset_bottom = 111.0
+theme = ExtResource("2_0c58h")
+text = "Length: "
+
+[node name="lblWidth" type="Label" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 139.0
+offset_right = 248.0
+offset_bottom = 206.0
+theme = ExtResource("2_0c58h")
+text = "Width:"
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 232.0
+offset_right = 1096.0
+offset_bottom = 487.0
+
+[node name="txtLen" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 49.0
+offset_right = 433.0
+offset_bottom = 124.0
+theme = ExtResource("2_0c58h")
+placeholder_text = "--"
+alignment = 1
+
+[node name="txtWid" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 143.0
+offset_right = 433.0
+offset_bottom = 218.0
+theme = ExtResource("2_0c58h")
+placeholder_text = "--"
+alignment = 1
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 508.0
+offset_right = 372.0
+offset_bottom = 623.0
+theme = ExtResource("2_0c58h")
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 409.0
+offset_top = 511.0
+offset_right = 759.0
+offset_bottom = 626.0
+theme = ExtResource("2_0c58h")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 514.0
+offset_right = 1120.0
+offset_bottom = 622.0
+theme = ExtResource("2_0c58h")
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
