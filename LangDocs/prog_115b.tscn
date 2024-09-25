@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://demeovw36byil"]
+
+[ext_resource type="Script" path="res://LangDocs/prog_115b.gd" id="1_0dc6e"]
+[ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="2_h6l41"]
+
+[node name="prog_115b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0dc6e")
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 530.0
+offset_right = 334.0
+offset_bottom = 628.0
+theme = ExtResource("2_h6l41")
+text = "Calculate"
+
+[node name="btn2Clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 530.0
+offset_right = 731.0
+offset_bottom = 628.0
+theme = ExtResource("2_h6l41")
+text = "Clear"
+
+[node name="btn3Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 528.0
+offset_right = 1112.0
+offset_bottom = 626.0
+theme = ExtResource("2_h6l41")
+text = "Exit"
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 25.0
+offset_right = 1097.0
+offset_bottom = 492.0
+theme = ExtResource("2_h6l41")
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btn2Clear" to="." method="_on_btn_2_clear_pressed"]
+[connection signal="pressed" from="btn3Exit" to="." method="_on_btn_3_exit_pressed"]
