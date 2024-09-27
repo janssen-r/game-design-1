@@ -12,13 +12,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0273p")
 
-[node name="ItemList" type="ItemList" parent="."]
-layout_mode = 0
-offset_left = 42.0
-offset_top = 69.0
-offset_right = 464.0
-offset_bottom = 608.0
-
 [node name="btnCalc" type="Button" parent="."]
 layout_mode = 0
 offset_left = 494.0
@@ -48,21 +41,26 @@ text = "Exit"
 
 [node name="lblHours" type="Label" parent="."]
 layout_mode = 0
-offset_left = 67.0
+offset_left = 37.0
 offset_top = 12.0
-offset_right = 207.0
+offset_right = 177.0
 offset_bottom = 60.0
 theme = ExtResource("2_pcu4m")
 text = "Hours"
 
 [node name="lblPay" type="Label" parent="."]
 layout_mode = 0
-offset_left = 263.0
-offset_top = 12.0
-offset_right = 403.0
-offset_bottom = 60.0
+offset_left = 142.0
+offset_top = 13.0
+offset_right = 282.0
+offset_bottom = 61.0
 theme = ExtResource("2_pcu4m")
 text = "Pay"
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
 [connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]

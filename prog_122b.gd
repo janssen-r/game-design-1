@@ -1,10 +1,10 @@
 extends Control
 
 func _on_btn_calc_pressed() -> void:
-	var hours
-	while hours < 40:
-		ItemList.addItem str(hours)
-		hours += 2
+	var hours = 4
+	for num in range(1,41):
+		ItemList.add_item(hours)
+		hours += 4
 
 func _on_btn_clear_pressed() -> void:
 	pass # Replace with function body.
