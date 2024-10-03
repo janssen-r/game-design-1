@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://squ537xcxd1w"]
+
+[ext_resource type="Texture2D" uid="uid://nrowdht53phx" path="res://icon.svg" id="1_7vvgq"]
+[ext_resource type="Script" path="res://plt_enemy.gd" id="1_pbnxs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wi02m"]
+size = Vector2(14, 14)
+
+[node name="plt_enemy" type="RigidBody2D"]
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_pbnxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wi02m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.796078, 0, 0, 1)
+scale = Vector2(0.109375, 0.109375)
+texture = ExtResource("1_7vvgq")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvtf4wpie6x5l"]
+[gd_scene load_steps=8 format=3 uid="uid://bvtf4wpie6x5l"]
 
 [ext_resource type="Script" path="res://plt_world_1.gd" id="1_prsop"]
 [ext_resource type="PackedScene" uid="uid://brkh0quant142" path="res://plt_player.tscn" id="2_ivxev"]
 [ext_resource type="PackedScene" uid="uid://bbewkyh7wutux" path="res://interact.tscn" id="3_kgn7a"]
 [ext_resource type="PackedScene" uid="uid://b2jrrvi7jwxj6" path="res://draggable.tscn" id="4_5hgjj"]
+[ext_resource type="PackedScene" uid="uid://squ537xcxd1w" path="res://plt_enemy.tscn" id="5_5htj7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g40wn"]
 size = Vector2(46, 20)
@@ -40,4 +41,49 @@ texture = SubResource("PlaceholderTexture2D_hmc7w")
 position = Vector2(1032, 464)
 
 [node name="draggable" parent="." instance=ExtResource("4_5hgjj")]
-position = Vector2(136, 433)
+position = Vector2(140, 470)
+
+[node name="plt_enemy" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(640, 427)
+
+[node name="plt_enemy2" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(379, 431)
+
+[node name="plt_enemy3" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(436, 341)
+
+[node name="plt_enemy4" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(511, 407)
+
+[node name="plt_enemy5" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(297, 499)
+
+[node name="plt_enemy6" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(841, 529)
+
+[node name="plt_enemy7" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(932, 434)
+
+[node name="plt_enemy8" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(776, 588)
+
+[node name="plt_enemy9" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(1092, 433)
+
+[node name="plt_enemy10" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(798, 560)
+
+[node name="plt_enemy11" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(776, 501)
+
+[node name="plt_enemy12" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(792, 522)
+
+[node name="plt_enemy13" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(806, 465)
+
+[node name="plt_enemy14" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(537, 553)
+
+[node name="plt_enemy15" parent="." instance=ExtResource("5_5htj7")]
+position = Vector2(114, 407)

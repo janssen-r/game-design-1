@@ -1,10 +1,13 @@
 extends Control
 
 func _on_btn_calc_pressed() -> void:
-	var hours = str(4)
+	var hours = 4
+	hours = str(4)
 	for num in range(1,41):
+		hours = int(hours)
 		$ItemList.add_item (hours)
-		int(hours) += 4
+		hours = str(hours)
+		hours += 4
 
 func _on_btn_clear_pressed() -> void:
 	pass # Replace with function body.
