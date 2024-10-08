@@ -40,8 +40,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wi02m"]
-size = Vector2(20, 18)
+[sub_resource type="CircleShape2D" id="CircleShape2D_uleb2"]
+radius = 9.05539
 
 [node name="plt_enemy" type="RigidBody2D"]
 contact_monitor = true
@@ -54,7 +54,7 @@ sprite_frames = SubResource("SpriteFrames_hugdg")
 frame_progress = 0.094923
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_wi02m")
+shape = SubResource("CircleShape2D_uleb2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
