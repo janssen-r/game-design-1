@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvtf4wpie6x5l"]
+[gd_scene load_steps=9 format=3 uid="uid://bvtf4wpie6x5l"]
 
 [ext_resource type="Script" path="res://plt_world_1.gd" id="1_prsop"]
 [ext_resource type="PackedScene" uid="uid://brkh0quant142" path="res://plt_player.tscn" id="2_ivxev"]
 [ext_resource type="PackedScene" uid="uid://bbewkyh7wutux" path="res://interact.tscn" id="3_kgn7a"]
 [ext_resource type="PackedScene" uid="uid://b2jrrvi7jwxj6" path="res://draggable.tscn" id="4_5hgjj"]
 [ext_resource type="PackedScene" uid="uid://squ537xcxd1w" path="res://plt_enemy.tscn" id="5_5htj7"]
+[ext_resource type="PackedScene" uid="uid://psjstkbx1h7a" path="res://change_lvl.tscn" id="6_lesi3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g40wn"]
 size = Vector2(46, 20)
@@ -12,10 +13,11 @@ size = Vector2(46, 20)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hmc7w"]
 
 [node name="plt_world1" type="Node2D"]
+position = Vector2(1, 0)
 script = ExtResource("1_prsop")
 
 [node name="plt_player" parent="." instance=ExtResource("2_ivxev")]
-position = Vector2(116, 544)
+position = Vector2(116, 538)
 
 [node name="world" type="StaticBody2D" parent="."]
 
@@ -38,7 +40,7 @@ scale = Vector2(46, 20)
 texture = SubResource("PlaceholderTexture2D_hmc7w")
 
 [node name="interact" parent="." instance=ExtResource("3_kgn7a")]
-position = Vector2(1032, 464)
+position = Vector2(892, 250)
 
 [node name="draggable" parent="." instance=ExtResource("4_5hgjj")]
 position = Vector2(140, 470)
@@ -87,3 +89,7 @@ position = Vector2(537, 553)
 
 [node name="plt_enemy15" parent="." instance=ExtResource("5_5htj7")]
 position = Vector2(171, 559)
+
+[node name="change_lvl" parent="." instance=ExtResource("6_lesi3")]
+position = Vector2(1039, 464)
+next_level = "plt_world_2"
