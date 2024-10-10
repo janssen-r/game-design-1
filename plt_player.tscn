@@ -1,8 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://brkh0quant142"]
+[gd_scene load_steps=17 format=3 uid="uid://brkh0quant142"]
 
 [ext_resource type="Script" path="res://plt_player.gd" id="1_e6t1q"]
 [ext_resource type="Texture2D" uid="uid://nrowdht53phx" path="res://icon.svg" id="1_f4m5c"]
 [ext_resource type="Texture2D" uid="uid://d2twa14g8bdxq" path="res://assets/sprites/characters.png" id="2_gvbmf"]
+[ext_resource type="PackedScene" uid="uid://dr6fcb56w3210" path="res://pause_menu.tscn" id="4_74h13"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8u8w3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1wal"]
 atlas = ExtResource("2_gvbmf")
@@ -92,16 +95,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8u8w3"]
-
 [node name="plt_player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_e6t1q")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -1)
-sprite_frames = SubResource("SpriteFrames_0ns12")
-animation = &"walk"
-frame_progress = 0.72068
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -112,5 +107,15 @@ texture = ExtResource("1_f4m5c")
 shape = SubResource("CapsuleShape2D_8u8w3")
 debug_color = Color(0.970334, 0, 0.455417, 0.42)
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_0ns12")
+animation = &"walk"
+frame_progress = 0.72068
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.5, 3.5)
+
+[node name="pause_menu" parent="Camera2D" instance=ExtResource("4_74h13")]
+visible = false
+z_index = 1

@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+const JUMP_VELOCITY = -400.0
 
 var speed = 100
 var direction = -1
@@ -8,7 +9,7 @@ func _ready() -> void:
 	$Timer.start()
 	
 func _physics_process(delta: float) -> void:
-		self.linear_velocity.x = speed * direction
+	self.linear_velocity.x = speed * direction
 
 func _on_timer_timeout() -> void:
 	direction *= -1
