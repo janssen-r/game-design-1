@@ -1,94 +1,81 @@
-[gd_scene load_steps=17 format=3 uid="uid://brkh0quant142"]
+[gd_scene load_steps=22 format=3 uid="uid://brkh0quant142"]
 
 [ext_resource type="Script" path="res://plt_player.gd" id="1_e6t1q"]
 [ext_resource type="Texture2D" uid="uid://nrowdht53phx" path="res://icon.svg" id="1_f4m5c"]
-[ext_resource type="Texture2D" uid="uid://d2twa14g8bdxq" path="res://assets/sprites/characters.png" id="2_gvbmf"]
+[ext_resource type="Texture2D" uid="uid://bowyvxf8yeep8" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-1.png" id="3_pa1jk"]
 [ext_resource type="PackedScene" uid="uid://dr6fcb56w3210" path="res://pause_menu.tscn" id="4_74h13"]
+[ext_resource type="Texture2D" uid="uid://dn2abg8kafpf4" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-2.png" id="4_ir518"]
+[ext_resource type="Texture2D" uid="uid://c0oj04otq7sdr" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-3.png" id="5_vn6e2"]
+[ext_resource type="Texture2D" uid="uid://buhxu8i6ty5su" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-4.png" id="6_7irxg"]
+[ext_resource type="Texture2D" uid="uid://2nearwf4gt8u" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-1.png" id="7_4mvk4"]
+[ext_resource type="Texture2D" uid="uid://c2epqffgp18ap" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-2.png" id="8_e48wh"]
+[ext_resource type="Texture2D" uid="uid://cxkpi3tihmate" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-3.png" id="9_q874m"]
+[ext_resource type="Texture2D" uid="uid://bsw8h8ug0sic8" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-4.png" id="10_ig0md"]
+[ext_resource type="Texture2D" uid="uid://bm17o4wm7y7t3" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-1.png" id="11_aqm2j"]
+[ext_resource type="Texture2D" uid="uid://xr68bmsehq2e" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-2.png" id="12_xor2l"]
+[ext_resource type="Texture2D" uid="uid://ce6swi7fd87mk" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-3.png" id="13_k6qgy"]
+[ext_resource type="Texture2D" uid="uid://cox4qpxqm66g3" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-4.png" id="14_7ccfb"]
+[ext_resource type="Texture2D" uid="uid://2fdff1gpyxn8" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-5.png" id="15_d71kt"]
+[ext_resource type="Texture2D" uid="uid://bx1ttwso8ndbt" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-6.png" id="16_ny5g3"]
+[ext_resource type="Texture2D" uid="uid://d14xmvtuhw5h0" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/background.png" id="18_t2uvq"]
+[ext_resource type="Texture2D" uid="uid://bk4n3lynul4ly" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/graveyard.png" id="18_u7gex"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8u8w3"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f1wal"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0silu"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5g6yc"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l7284"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(192, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sqw35"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(160, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h2140"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ga1nm"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(448, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cn1vb"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(384, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hxs7r"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(352, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlsw1"]
-atlas = ExtResource("2_gvbmf")
-region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0ns12"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f1wal")
+"texture": ExtResource("3_pa1jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ir518")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vn6e2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7irxg")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 3.5
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0silu")
+"texture": ExtResource("7_4mvk4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5g6yc")
+"texture": ExtResource("8_e48wh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l7284")
+"texture": ExtResource("9_q874m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sqw35")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h2140")
+"texture": ExtResource("10_ig0md")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 0.3,
-"texture": SubResource("AtlasTexture_ga1nm")
+"duration": 1.0,
+"texture": ExtResource("11_aqm2j")
 }, {
-"duration": 0.6,
-"texture": SubResource("AtlasTexture_cn1vb")
+"duration": 1.0,
+"texture": ExtResource("12_xor2l")
 }, {
-"duration": 0.6,
-"texture": SubResource("AtlasTexture_hxs7r")
+"duration": 1.0,
+"texture": ExtResource("13_k6qgy")
 }, {
-"duration": 0.6,
-"texture": SubResource("AtlasTexture_qlsw1")
+"duration": 1.0,
+"texture": ExtResource("14_7ccfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_d71kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ny5g3")
 }],
 "loop": true,
 "name": &"walk",
@@ -108,10 +95,12 @@ shape = SubResource("CapsuleShape2D_8u8w3")
 debug_color = Color(0.970334, 0, 0.455417, 0.42)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -1)
+position = Vector2(0, -4)
+scale = Vector2(0.644068, 0.644068)
 sprite_frames = SubResource("SpriteFrames_0ns12")
-animation = &"walk"
-frame_progress = 0.72068
+animation = &"jump"
+frame = 3
+frame_progress = 0.558492
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.5, 3.5)
@@ -119,3 +108,14 @@ zoom = Vector2(3.5, 3.5)
 [node name="pause_menu" parent="Camera2D" instance=ExtResource("4_74h13")]
 visible = false
 z_index = 1
+
+[node name="Graveyard" type="Sprite2D" parent="Camera2D"]
+z_index = -4
+position = Vector2(-2, 69)
+texture = ExtResource("18_u7gex")
+
+[node name="Background" type="Sprite2D" parent="Camera2D"]
+z_index = -5
+position = Vector2(1, 1)
+scale = Vector2(0.892857, 0.892857)
+texture = ExtResource("18_t2uvq")

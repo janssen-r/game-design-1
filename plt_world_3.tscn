@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfrwat88sr7hy"]
+
+[ext_resource type="PackedScene" uid="uid://brkh0quant142" path="res://plt_player.tscn" id="1_tfq5h"]
+
+[node name="plt_world_3" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="plt_player" parent="." instance=ExtResource("1_tfq5h")]
+position = Vector2(221, 377)
