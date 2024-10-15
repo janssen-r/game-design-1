@@ -1,47 +1,50 @@
-[gd_scene load_steps=10 format=3 uid="uid://squ537xcxd1w"]
+[gd_scene load_steps=13 format=3 uid="uid://squ537xcxd1w"]
 
 [ext_resource type="Texture2D" uid="uid://nrowdht53phx" path="res://icon.svg" id="1_7vvgq"]
 [ext_resource type="Script" path="res://plt_enemy.gd" id="1_pbnxs"]
-[ext_resource type="Texture2D" uid="uid://d2twa14g8bdxq" path="res://assets/sprites/characters.png" id="2_bdfdq"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d84er"]
-atlas = ExtResource("2_bdfdq")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ffpj6"]
-atlas = ExtResource("2_bdfdq")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2wnoc"]
-atlas = ExtResource("2_bdfdq")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ubn3t"]
-atlas = ExtResource("2_bdfdq")
-region = Rect2(64, 96, 32, 32)
+[ext_resource type="Texture2D" uid="uid://2bj3w6vr0wte" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-1.png" id="2_75kuy"]
+[ext_resource type="Texture2D" uid="uid://d3elvlah2ftwo" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-2.png" id="3_omfpp"]
+[ext_resource type="Texture2D" uid="uid://d2n0fo03tbpbq" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-3.png" id="4_rdrr3"]
+[ext_resource type="Texture2D" uid="uid://cg7vydvj3lidg" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-4.png" id="5_wit27"]
+[ext_resource type="Texture2D" uid="uid://butcnpubdte83" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-5.png" id="6_3uvsv"]
+[ext_resource type="Texture2D" uid="uid://civt5c2apb48p" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-6.png" id="7_n64hl"]
+[ext_resource type="Texture2D" uid="uid://pfeb1im1jdi0" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-7.png" id="8_tkqmc"]
+[ext_resource type="Texture2D" uid="uid://35jvw7wan1hg" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-8.png" id="9_ftrjx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hugdg"]
 animations = [{
 "frames": [{
-"duration": 0.8,
-"texture": SubResource("AtlasTexture_d84er")
+"duration": 1.0,
+"texture": ExtResource("2_75kuy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ffpj6")
-}, {
-"duration": 0.8,
-"texture": SubResource("AtlasTexture_2wnoc")
+"texture": ExtResource("3_omfpp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ubn3t")
+"texture": ExtResource("4_rdrr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wit27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3uvsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n64hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tkqmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ftrjx")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_uleb2"]
-radius = 9.05539
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbsvg"]
+height = 48.0
 
 [node name="plt_enemy" type="RigidBody2D"]
 contact_monitor = true
@@ -51,10 +54,12 @@ script = ExtResource("1_pbnxs")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_hugdg")
-frame_progress = 0.094923
+frame = 6
+frame_progress = 0.221149
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_uleb2")
+position = Vector2(-1, -6)
+shape = SubResource("CapsuleShape2D_lbsvg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
