@@ -21,6 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://bk4n3lynul4ly" path="res://assets/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/graveyard.png" id="18_u7gex"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8u8w3"]
+radius = 9.0
+height = 38.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0ns12"]
 animations = [{
@@ -91,6 +93,7 @@ scale = Vector2(0.15625, 0.234375)
 texture = ExtResource("1_f4m5c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
 shape = SubResource("CapsuleShape2D_8u8w3")
 debug_color = Color(0.970334, 0, 0.455417, 0.42)
 
@@ -98,9 +101,6 @@ debug_color = Color(0.970334, 0, 0.455417, 0.42)
 position = Vector2(0, -4)
 scale = Vector2(0.644068, 0.644068)
 sprite_frames = SubResource("SpriteFrames_0ns12")
-animation = &"jump"
-frame = 3
-frame_progress = 0.558492
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.5, 3.5)
