@@ -112,10 +112,11 @@ z_index = 1
 [node name="Graveyard" type="Sprite2D" parent="Camera2D"]
 z_index = -4
 position = Vector2(-2, 69)
+scale = Vector2(1.25203, 1.25203)
 texture = ExtResource("18_u7gex")
 
 [node name="Background" type="Sprite2D" parent="Camera2D"]
 z_index = -5
 position = Vector2(1, 1)
-scale = Vector2(0.892857, 0.892857)
+scale = Vector2(1.22321, 1.22321)
 texture = ExtResource("18_t2uvq")
