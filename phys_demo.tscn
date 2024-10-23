@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbabpilcwspdt"]
+[gd_scene load_steps=7 format=3 uid="uid://dbabpilcwspdt"]
 
 [ext_resource type="Script" path="res://phys_demo.gd" id="1_0g6vg"]
 [ext_resource type="PackedScene" uid="uid://c5kmno8fvkfic" path="res://phys_ball.tscn" id="1_mt2uk"]
 [ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="3_gmymq"]
+[ext_resource type="PackedScene" uid="uid://citqf1i6yahlg" path="res://phys_explosion.tscn" id="3_imyg1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xney"]
 size = Vector2(1174, 1018)
@@ -25,6 +26,9 @@ shape = SubResource("RectangleShape2D_7xney")
 position = Vector2(580.875, 1138.13)
 scale = Vector2(1168.25, 1017.75)
 texture = SubResource("PlaceholderTexture2D_pxp3w")
+
+[node name="phys_explosion" parent="StaticBody2D" instance=ExtResource("3_imyg1")]
+position = Vector2(732, 288)
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 2.0

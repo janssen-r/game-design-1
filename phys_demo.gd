@@ -14,6 +14,10 @@ func _input(event: InputEvent) -> void:
 		nball.linear_velocity = Vector2(float($Panel/txtVelX.text), float($Panel/txtVelY.text))
 		add_child(nball)
 
+func _keyinput(event: InputEvent) -> void: 
+	if event is InputEventKey and event.pressed:
+		var nball = phys_ball.instantiate()
+
 func _on_grav_slider_value_changed(value: float) -> void:
 		for child in get_children():
 			if child is RigidBody2D:
