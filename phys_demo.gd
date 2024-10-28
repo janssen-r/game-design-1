@@ -1,6 +1,7 @@
 extends Node2D
 
 var phys_ball = preload("res://phys_ball.tscn")
+var bomb = preload("res://phys_explosion.tscn")
 
 func _ready() -> void:
 	$Panel/GravSlider.value = $phys_ball.gravity_scale
@@ -16,7 +17,13 @@ func _input(event: InputEvent) -> void:
 
 func _keyinput(event: InputEvent) -> void: 
 	if event is InputEventKey and event.pressed:
-		var nball = phys_ball.instantiate()
+		var bomb = bomb.instantiate()
+		bomb.position = event.position
+		bomb.gravity_scale = $Panel/GravSlider.value
+		bomb.inertia = float($Panel/txtInertia.text)
+		bomb.linear_velocity = Vector2(float($Panel/txtVelX.text), float($Panel/txtVelY.text))
+		add_child(bomb)
+		$StaticBody2D/phys_explosion/Timer.timeout
 
 func _on_grav_slider_value_changed(value: float) -> void:
 		for child in get_children():
@@ -39,3 +46,11 @@ func _on_button_2_pressed() -> void:
 		if child is RigidBody2D:
 			child.inertia = inertia
 			child.linear_velocity = velocity
+
+
+func _on_child_exiting_tree(node: Node) -> void:
+	
+	Node.position = 
+	for child in get_children():
+		if child is RigidBody2D:
+			pass
