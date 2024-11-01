@@ -1,8 +1,9 @@
-[gd_scene load_steps=49 format=3 uid="uid://751masobgewe"]
+[gd_scene load_steps=50 format=3 uid="uid://751masobgewe"]
 
 [ext_resource type="Texture2D" uid="uid://bqox3scnc0cxc" path="res://assets/sprites/zelda_like/gfx/character.png" id="1_dwvst"]
 [ext_resource type="Script" path="res://td_player.gd" id="1_m1yei"]
 [ext_resource type="Script" path="res://pause_menu.gd" id="3_34slx"]
+[ext_resource type="PackedScene" uid="uid://nd48c4o1nknr" path="res://player_hud.tscn" id="4_wqdce"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_utebk"]
 atlas = ExtResource("1_dwvst")
@@ -381,3 +382,8 @@ script = ExtResource("3_34slx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_mp7mm")
+
+[node name="PlayerHUD" parent="." instance=ExtResource("4_wqdce")]
+visible = false
+
+[connection signal="ready" from="." to="." method="_on_ready"]
