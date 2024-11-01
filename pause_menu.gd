@@ -1,4 +1,4 @@
-extends Control
+extends Camera2D
 
 func _ready() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
