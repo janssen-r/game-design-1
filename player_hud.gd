@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var player = get_tree().get_first_node_in_group("Player")
 @onready var hearts = $PlayerHealth/Hearts
+@onready var money = $PlayerMoney/Coins
 
 const HEART_ROW_SIZE = 10
 const HEART_OFFSET = 16
@@ -42,3 +43,4 @@ func _process(delta: float) -> void:
 		elif index < full_hearts:
 			heart.frame = 4
 	pass
+	

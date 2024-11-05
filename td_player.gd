@@ -23,7 +23,7 @@ func _on_ready() -> void:
 
 func pickup_health(value):
 	data.health += value
-	data.health = clamp(data.health, 0, data.max_heath)
+	data.health = clamp(data.health, 0, data.max_health)
 	
 func pickup_money(value):
 	data.money += value

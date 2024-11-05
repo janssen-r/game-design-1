@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://nd48c4o1nknr"]
+[gd_scene load_steps=4 format=3 uid="uid://nd48c4o1nknr"]
 
 [ext_resource type="Script" path="res://player_hud.gd" id="1_mwgiy"]
 [ext_resource type="Texture2D" uid="uid://c06e3gs47hr8m" path="res://assets/sprites/zelda_like/gfx/objects.png" id="2_yxmfr"]
+[ext_resource type="Theme" uid="uid://cv1o3wmjapddp" path="res://BigFont.tres" id="3_v61os"]
 
 [node name="PlayerHUD" type="CanvasLayer" groups=["HUD"]]
 script = ExtResource("1_mwgiy")
@@ -20,7 +21,7 @@ hframes = 33
 vframes = 20
 frame = 8
 
-[node name="Money" type="Control" parent="."]
+[node name="PlayerMoney" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
@@ -29,15 +30,19 @@ offset_top = -131.0
 offset_right = 297.0
 grow_vertical = 0
 
-[node name="Icon" type="Sprite2D" parent="Money"]
+[node name="Icon" type="Sprite2D" parent="PlayerMoney"]
 position = Vector2(51, 86)
 scale = Vector2(5, 5)
 texture = ExtResource("2_yxmfr")
 hframes = 33
 vframes = 20
-frame = 36
+frame = 132
 
-[node name="Coins" type="Label" parent="Money"]
+[node name="Coins" type="Label" parent="PlayerMoney"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 89.0
+offset_top = 60.0
+offset_right = 185.0
+offset_bottom = 110.0
+theme = ExtResource("3_v61os")
+text = "000"
