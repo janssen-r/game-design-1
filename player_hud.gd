@@ -44,3 +44,5 @@ func _process(delta: float) -> void:
 			heart.frame = 4
 	pass
 	
+	pass # if money < 0:
+	pass # money == 0
