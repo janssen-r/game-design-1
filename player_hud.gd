@@ -25,6 +25,8 @@ func _ready() -> void:
 	draw_hearts()
 
 func _process(delta: float) -> void:
+	$PlayerMoney/Coins = money
+	
 	var p_health = player.data.health
 	var full_hearts = floor(p_health / 20)
 	var remainder = int(p_health) % 20
@@ -44,5 +46,3 @@ func _process(delta: float) -> void:
 			heart.frame = 4
 	pass
 	
-	pass # if money < 0:
-	pass # money == 0
