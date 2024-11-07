@@ -25,7 +25,7 @@ func _ready() -> void:
 	draw_hearts()
 
 func _process(delta: float) -> void:
-	$PlayerMoney/Coins = money
+	$PlayerMoney/Coins.text = money # TODO FIX THIS TO UPDATE COIN UI
 	
 	var p_health = player.data.health
 	var full_hearts = floor(p_health / 20)
