@@ -71,7 +71,6 @@ func pickup_health(value):
 	
 func pickup_money(value):
 	data.money += value
-	data.money = clamp(data.money, 0, 999)
 
 signal health_depleted
 
