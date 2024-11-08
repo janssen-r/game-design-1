@@ -73,6 +73,25 @@ func pickup_money(value):
 	data.money += value
 	data.money = clamp(data.money, 0, 999)
 
+signal health_depleted
+
+func take_damage(dmg):
+	if damage_lock == 0.0:
+		data.health -= dmg
+		data.state = STATES.DAMAGED
+		damage_lock = 0.5
+		animation_lock = dmg * 0.005
+		# TODO: damage shader
+		if data.health > 0:
+			# TODO play damage sound
+			pass
+		else:
+				data.state = STATES.DEAD 
+				# death animation & SFX
+				await get_tree().create_timer(0.5).timeout
+				health_depleted.emit
+	pass
+
 func _physics_process(delta: float) -> void:
 	animation_lock = max(animation_lock-delta, 0.0)
 	damage_lock = max(damage_lock-delta, 0.0)
