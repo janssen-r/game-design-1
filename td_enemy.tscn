@@ -174,7 +174,7 @@ frame_progress = 0.470107
 position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_awmnu")
 
-[node name="RayCast2D2R" type="RayCast2D" parent="."]
+[node name="RayCast2DR" type="RayCast2D" parent="."]
 target_position = Vector2(-48, -24)
 
 [node name="RayCast2DM" type="RayCast2D" parent="."]
