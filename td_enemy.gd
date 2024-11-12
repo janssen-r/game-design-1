@@ -40,7 +40,7 @@ var ai_timer_max = 0.5
 var ai_timer = ai_timer_max - randi() % 5
 var damage_lock = 0.0
 var animation_lock = 0.0
-var knockback = 128.0
+var knockback = 128.0 * 1.25
 var vision_distance = 50.0
 var money_value = 5.0
 
