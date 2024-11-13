@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dfd3p8upfyli7"]
+
+[sub_resource type="Shader" id="Shader_yp052"]
+code = "shader_type spatial;
+
+void fragment() {
+	// Called for every pixel the material is visible on.
+}"
+
+[resource]
+render_priority = 0
+shader = SubResource("Shader_yp052")
