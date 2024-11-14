@@ -386,4 +386,6 @@ shape = SubResource("CapsuleShape2D_mp7mm")
 [node name="PlayerHUD" parent="." instance=ExtResource("4_wqdce")]
 visible = false
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="ready" from="." to="." method="_on_ready"]

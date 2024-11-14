@@ -1,12 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dfd3p8upfyli7"]
 
-[sub_resource type="Shader" id="Shader_yp052"]
-code = "shader_type spatial;
-
-void fragment() {
-	// Called for every pixel the material is visible on.
-}"
+[ext_resource type="Shader" path="res://td_enemy.gdshader" id="1_qq0y8"]
 
 [resource]
-render_priority = 0
-shader = SubResource("Shader_yp052")
+shader = ExtResource("1_qq0y8")
+shader_parameter/intensity = null
