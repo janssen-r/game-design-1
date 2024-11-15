@@ -1,11 +1,17 @@
-[gd_scene load_steps=7 format=4 uid="uid://bgnj4j8d8rq3k"]
+[gd_scene load_steps=10 format=4 uid="uid://bgnj4j8d8rq3k"]
 
 [ext_resource type="TileSet" uid="uid://dvtdm53jhat8e" path="res://assets/tilesets/td_world_1.tres" id="1_6p1af"]
 [ext_resource type="PackedScene" uid="uid://751masobgewe" path="res://td_player.tscn" id="1_roi4u"]
+[ext_resource type="Script" path="res://change_lvl.gd" id="2_fogon"]
 [ext_resource type="PackedScene" uid="uid://bhwfgd3wdrnu0" path="res://entities/items/mini_heart.tscn" id="3_i5lo2"]
-[ext_resource type="PackedScene" uid="uid://c7q428r4o65d3" path="res://entities/items/coin.tscn" id="4_qjvpc"]
+[ext_resource type="PackedScene" uid="uid://c7q428r4o65d3" path="res://entities/items/mini_coin.tscn" id="4_qjvpc"]
 [ext_resource type="PackedScene" uid="uid://xm1kt7jegdcc" path="res://td_enemy.tscn" id="5_ssnjq"]
 [ext_resource type="AudioStream" uid="uid://ccci0fe6eaot1" path="res://assets/sounds/overworld.mp3" id="6_hiply"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a2cm1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hu2gu"]
+size = Vector2(48, 43)
 
 [node name="td_world1" type="Node2D"]
 
@@ -18,8 +24,24 @@ tile_set = ExtResource("1_6p1af")
 tile_map_data = PackedByteArray("AAACAP//AAAWAAkAAAAGAP3/AAAGAAAAAAA=")
 tile_set = ExtResource("1_6p1af")
 
+[node name="change_lvl" type="Area2D" parent="."]
+position = Vector2(39, -125)
+script = ExtResource("2_fogon")
+next_level = "td_world_2"
+
+[node name="Sprite2D" type="Sprite2D" parent="change_lvl"]
+visible = false
+modulate = Color(0.792157, 0.282353, 0, 1)
+position = Vector2(0, 26)
+scale = Vector2(48, 43)
+texture = SubResource("PlaceholderTexture2D_a2cm1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="change_lvl"]
+position = Vector2(0, 26)
+shape = SubResource("RectangleShape2D_hu2gu")
+
 [node name="td_player" parent="." instance=ExtResource("1_roi4u")]
-position = Vector2(0, -1)
+position = Vector2(39, -64)
 
 [node name="mini_heart" parent="." instance=ExtResource("3_i5lo2")]
 position = Vector2(104, 9)
@@ -52,3 +74,5 @@ position = Vector2(-131, 187)
 stream = ExtResource("6_hiply")
 volume_db = -10.0
 autoplay = true
+
+[connection signal="body_entered" from="change_lvl" to="change_lvl" method="_on_body_entered"]
