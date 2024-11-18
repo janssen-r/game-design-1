@@ -53,7 +53,7 @@ signal recovered
 @onready var aud_player = $AudioStreamPlayer2D
 
 var drops = ["drop_coin", "drop_heart"]
-var coin_scene = preload("res://entities/items/coin.tscn")
+var coin_scene = preload("res://entities/items/mini_coin.tscn")
 var heart_scene = preload("res://entities/items/mini_heart.tscn")
 var death_sound = preload("res://assets/sounds/explosion.wav")
 

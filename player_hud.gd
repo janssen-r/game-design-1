@@ -25,7 +25,6 @@ func _ready() -> void:
 	draw_hearts()
 
 func _process(delta: float) -> void:
-	pass
 	# $PlayerMoney/Coins.text = money # TODO FIX THIS TO UPDATE COIN UI
 	
 	var p_health = player.data.health
