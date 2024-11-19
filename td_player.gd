@@ -112,6 +112,13 @@ func _physics_process(delta: float) -> void:
 		
 		if data.state != STATES.CHARGING:
 			data.state = STATES.IDLE
+			
+	if Input.is_action_just_pressed("ui_select"): #Enter
+		for entity in get_tree().get_nodes_in_group("Interactable"):
+			if entity.in_range(self):
+				entity.interact(self)
+				data.state = STATES.IDLE
+				return
 	
 		var direction = Vector2(
 			Input.get_axis("ui_left", "ui_right"),

@@ -149,7 +149,7 @@ func _physics_process(delta: float) -> void:
 				(rcR.is_colliding() and rcR.get_collider() == player):
 					turn_toward_player_location(player.global_position)
 			pass
-		
+	
 		ai_timer = clamp(ai_timer-delta, 0.0, ai_timer_max)
 		if ai_timer == 0.0:
 			if AI_STATE == STATES.IDLE:
