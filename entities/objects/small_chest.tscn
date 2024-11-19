@@ -1,13 +1,42 @@
-[gd_scene format=3 uid="uid://rohn6gt0208u"]
+[gd_scene load_steps=7 format=3 uid="uid://rohn6gt0208u"]
+
+[ext_resource type="Script" path="res://entities/objects/small_chest.gd" id="1_fts5k"]
+[ext_resource type="Texture2D" uid="uid://c06e3gs47hr8m" path="res://assets/sprites/zelda_like/gfx/objects.png" id="2_5c5ct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpy0r"]
+atlas = ExtResource("2_5c5ct")
+region = Rect2(0, 0, 15, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fsj3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpy0r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6t6t0"]
+radius = 13.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2aa11"]
+size = Vector2(15, 12)
 
 [node name="SmallChest" type="Node2D" groups=["Chest", "Interactable"]]
+script = ExtResource("1_fts5k")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fsj3s")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+shape = SubResource("CircleShape2D_6t6t0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_2aa11")
