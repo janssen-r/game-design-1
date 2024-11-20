@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://rohn6gt0208u"]
+[gd_scene load_steps=8 format=3 uid="uid://rohn6gt0208u"]
 
 [ext_resource type="Script" path="res://entities/objects/small_chest.gd" id="1_fts5k"]
 [ext_resource type="Texture2D" uid="uid://c06e3gs47hr8m" path="res://assets/sprites/zelda_like/gfx/objects.png" id="2_5c5ct"]
@@ -7,11 +7,18 @@
 atlas = ExtResource("2_5c5ct")
 region = Rect2(0, 0, 15, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewvc2"]
+atlas = ExtResource("2_5c5ct")
+region = Rect2(196, 21, 24, 21)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fsj3s"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jpy0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewvc2")
 }],
 "loop": true,
 "name": &"default",
