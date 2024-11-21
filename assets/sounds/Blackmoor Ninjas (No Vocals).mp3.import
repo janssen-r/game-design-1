@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2isvxrj7lfpl"
+path="res://.godot/imported/Blackmoor Ninjas (No Vocals).mp3-c080c00ccaf8263010aa59293da591f7.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Blackmoor Ninjas (No Vocals).mp3"
+dest_files=["res://.godot/imported/Blackmoor Ninjas (No Vocals).mp3-c080c00ccaf8263010aa59293da591f7.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

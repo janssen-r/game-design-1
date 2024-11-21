@@ -7,9 +7,9 @@
 atlas = ExtResource("2_5c5ct")
 region = Rect2(0, 0, 15, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ewvc2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m474t"]
 atlas = ExtResource("2_5c5ct")
-region = Rect2(196, 21, 24, 21)
+region = Rect2(38, 21, 19, 21)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fsj3s"]
 animations = [{
@@ -18,7 +18,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_jpy0r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ewvc2")
+"texture": SubResource("AtlasTexture_m474t")
 }],
 "loop": true,
 "name": &"default",
