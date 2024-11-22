@@ -13,7 +13,7 @@ func remove():
 
 func interact(player):
 	"""TODO: to be implemented by child class"""
-	# something like  player.pickup_iem(value)
+	# something like  player.pickup_item(value)
 	remove()
 
 func _init(default_value: int = 1):
