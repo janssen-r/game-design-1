@@ -46,7 +46,7 @@ script = ExtResource("1_iocl5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4dmf2")
-frame_progress = 0.218375
+frame_progress = 0.685849
 
 [node name="Area2D" type="Area2D" parent="."]
 
