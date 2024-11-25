@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c7q428r4o65d3"]
 
-[ext_resource type="Script" path="res://entities/items/mini_coin.gd" id="1_qgofk"]
+[ext_resource type="Script" path="res://assets/sprites/zelda_like/gfx/entities/items/mini_coin.gd" id="1_qgofk"]
 [ext_resource type="Texture2D" uid="uid://c06e3gs47hr8m" path="res://assets/sprites/zelda_like/gfx/objects.png" id="2_shqkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5efli"]

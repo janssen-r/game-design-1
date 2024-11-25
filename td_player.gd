@@ -21,7 +21,7 @@ var damage_lock = 0.0 # Invincibility frames
 var charge_time = 2.5
 var charge_duration = 0.0
 
-var slash_scene = preload("res://entities/attacks/slash.tscn")
+var slash_scene = preload("res://assets/sprites/zelda_like/gfx/entities/attacks/slash.tscn")
 var damage_shader = preload("res://assets/shaders/take_damage.tres")
 var attack_sound = preload("res://assets/sounds/slash.wav")
 # TODO: atack/preload sounds = _death, _hurt, coin/mini heart pickup, charge attack
@@ -77,7 +77,14 @@ func _on_ready() -> void:
 func pickup_health(value):
 	data.health += value
 	data.health = clamp(data.health, 0, data.max_health)
-	
+
+func pickup_heartcontainer():
+	if data.max_health < MAXIMUM_OBTAINABLE_HEALTH:
+		data.max_health += 20
+		data.health += 20
+	else:
+		data.health += 20
+
 func pickup_money(value):
 	data.money += value
 

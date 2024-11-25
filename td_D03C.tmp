@@ -367,6 +367,13 @@ tile_set = SubResource("TileSet_122ul")
 
 [node name="td_player" parent="." instance=ExtResource("2_r26kq")]
 position = Vector2(506, 638)
+data = {
+"health": 60,
+"max_health": 60.0,
+"money": 0,
+"secondaries": [],
+"state": 0
+}
 
 [node name="change_lvl" type="Area2D" parent="."]
 position = Vector2(506, 675)
@@ -449,7 +456,7 @@ shape = SubResource("RectangleShape2D_vjp1n")
 position = Vector2(830, 515)
 
 [node name="heart_container" parent="." instance=ExtResource("8_lt3cv")]
-position = Vector2(830, 527)
+position = Vector2(505, 606)
 
 [connection signal="body_entered" from="change_lvl" to="change_lvl" method="_on_body_entered"]
 [connection signal="body_entered" from="change_lvl2" to="change_lvl2" method="_on_body_entered"]

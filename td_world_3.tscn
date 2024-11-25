@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://c7gac7xd247mf"]
+[gd_scene load_steps=10 format=4 uid="uid://c7gac7xd247mf"]
 
 [ext_resource type="Texture2D" uid="uid://06eftulcscgq" path="res://assets/sprites/zelda_like/sewer_1.png" id="1_yxfbd"]
 [ext_resource type="PackedScene" uid="uid://751masobgewe" path="res://td_player.tscn" id="2_02cak"]
 [ext_resource type="Script" path="res://change_lvl.gd" id="3_j3v5p"]
 [ext_resource type="AudioStream" uid="uid://d2isvxrj7lfpl" path="res://assets/sounds/Blackmoor Ninjas (No Vocals).mp3" id="4_3eigh"]
+[ext_resource type="PackedScene" uid="uid://squ537xcxd1w" path="res://plt_enemy.tscn" id="5_5p7q5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0j0mw"]
 texture = ExtResource("1_yxfbd")
@@ -398,5 +399,8 @@ position = Vector2(104, 78)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_3eigh")
 autoplay = true
+
+[node name="plt_enemy" parent="." instance=ExtResource("5_5p7q5")]
+position = Vector2(114, 126)
 
 [connection signal="body_entered" from="change_lvl" to="change_lvl" method="_on_body_entered"]

@@ -3,8 +3,8 @@
 [ext_resource type="TileSet" uid="uid://dvtdm53jhat8e" path="res://assets/tilesets/td_world_1.tres" id="1_6p1af"]
 [ext_resource type="PackedScene" uid="uid://751masobgewe" path="res://td_player.tscn" id="1_roi4u"]
 [ext_resource type="Script" path="res://change_lvl.gd" id="2_fogon"]
-[ext_resource type="PackedScene" uid="uid://bhwfgd3wdrnu0" path="res://entities/items/mini_heart.tscn" id="3_i5lo2"]
-[ext_resource type="PackedScene" uid="uid://c7q428r4o65d3" path="res://entities/items/mini_coin.tscn" id="4_qjvpc"]
+[ext_resource type="PackedScene" uid="uid://bhwfgd3wdrnu0" path="res://assets/sprites/zelda_like/gfx/entities/items/mini_heart.tscn" id="3_i5lo2"]
+[ext_resource type="PackedScene" uid="uid://c7q428r4o65d3" path="res://assets/sprites/zelda_like/gfx/entities/items/mini_coin.tscn" id="4_qjvpc"]
 [ext_resource type="PackedScene" uid="uid://xm1kt7jegdcc" path="res://td_enemy.tscn" id="5_ssnjq"]
 [ext_resource type="AudioStream" uid="uid://ccci0fe6eaot1" path="res://assets/sounds/overworld.mp3" id="6_hiply"]
 
@@ -42,6 +42,13 @@ shape = SubResource("RectangleShape2D_hu2gu")
 
 [node name="td_player" parent="." instance=ExtResource("1_roi4u")]
 position = Vector2(39, -64)
+data = {
+"health": 60,
+"max_health": 60.0,
+"money": 0,
+"secondaries": [],
+"state": 0
+}
 
 [node name="mini_heart" parent="." instance=ExtResource("3_i5lo2")]
 position = Vector2(104, 9)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://6446lgqfskbx"]
 
 [ext_resource type="Texture2D" uid="uid://b7pcovdxkh1mm" path="res://assets/sprites/zelda_like/Slash.png" id="1_752rr"]
-[ext_resource type="Script" path="res://entities/attacks/slash.gd" id="1_j105u"]
+[ext_resource type="Script" path="res://assets/sprites/zelda_like/gfx/entities/attacks/slash.gd" id="1_j105u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r2ilp"]
 radius = 9.0
