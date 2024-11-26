@@ -24,7 +24,12 @@ var charge_duration = 0.0
 var slash_scene = preload("res://assets/sprites/zelda_like/gfx/entities/attacks/slash.tscn")
 var damage_shader = preload("res://assets/shaders/take_damage.tres")
 var attack_sound = preload("res://assets/sounds/slash.wav")
-# TODO: atack/preload sounds = _death, _hurt, coin/mini heart pickup, charge attack
+var death_sound = preload("res://assets/sounds/death.wav")
+var hurt_sound = preload("res://assets/sounds/hurt.wav")
+var coin_sound = preload("res://assets/sounds/coin_pickup.wav")
+var heart_sound = preload("res://assets/sounds/health_pickup.wav")
+var charge_sound = preload ("res://assets/sounds/charging.wav")
+# TODO: atack/preload sounds = DONE
 # aud_player.stream = whatever_sound
 # aud_player.play()
 
@@ -55,6 +60,8 @@ func attack():
 func charged_attack():
 	data.state = STATES.ATTACKING
 	$AnimatedSprite2D.play("swipe_charge")
+	aud_player.stream = charge_sound
+	aud_player.play()
 	attack_direction = -look_direction
 	damage_lock = 0.3
 	for i in range(9):
@@ -75,6 +82,8 @@ func _on_ready() -> void:
 	p_HUD.show()
 
 func pickup_health(value):
+	aud_player.stream = heart_sound
+	aud_player.play()
 	data.health += value
 	data.health = clamp(data.health, 0, data.max_health)
 
@@ -86,6 +95,8 @@ func pickup_heartcontainer():
 		data.health += 20
 
 func pickup_money(value):
+	aud_player.stream = coin_sound
+	aud_player.play()
 	data.money += value
 
 signal health_depleted
@@ -100,11 +111,14 @@ func take_damage(dmg):
 		$AnimatedSprite2D.material.set_shader_parameter("intensity", 0.5)
 		
 		if data.health > 0:
-			# TODO play damage sound
+			aud_player.stream = hurt_sound
+			aud_player.play()
 			pass
 		else:
 				data.state = STATES.DEAD 
 				# death animation & SFX
+				aud_player.stream = death_sound
+				aud_player.play()
 				await get_tree().create_timer(0.5).timeout
 				health_depleted.emit
 	pass
