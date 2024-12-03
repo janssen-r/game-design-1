@@ -91,8 +91,6 @@ func pickup_heartcontainer():
 	if data.max_health < MAXIMUM_OBTAINABLE_HEALTH:
 		data.max_health += 20
 		data.health += 20
-	else:
-		data.health += 20
 
 func pickup_money(value):
 	aud_player.stream = coin_sound
