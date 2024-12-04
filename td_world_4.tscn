@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://da0vccjxot4js"]
+[gd_scene load_steps=2 format=3 uid="uid://da0vccjxot4js"]
+
+[sub_resource type="TileSet" id="TileSet_yoo8q"]
 
 [node name="td_world_4" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_yoo8q")
