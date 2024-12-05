@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bgnj4j8d8rq3k"]
+[gd_scene load_steps=33 format=4 uid="uid://bgnj4j8d8rq3k"]
 
 [ext_resource type="TileSet" uid="uid://dvtdm53jhat8e" path="res://assets/tilesets/td_world_1.tres" id="1_6p1af"]
 [ext_resource type="PackedScene" uid="uid://751masobgewe" path="res://td_player.tscn" id="1_roi4u"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://ccci0fe6eaot1" path="res://assets/sounds/overworld.mp3" id="6_hiply"]
 [ext_resource type="Script" path="res://td_enemy.gd" id="7_tdeo3"]
 [ext_resource type="Texture2D" uid="uid://c0nnd6vc0qkrk" path="res://assets/sprites/zelda_like/gfx/log.png" id="8_dhjri"]
+[ext_resource type="PackedScene" uid="uid://bmg7f5701wyby" path="res://assets/sprites/zelda_like/gfx/entities/items/heart_container.tscn" id="10_a0ig6"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a2cm1"]
 
@@ -257,5 +258,8 @@ position = Vector2(-131, 187)
 stream = ExtResource("6_hiply")
 volume_db = -10.0
 autoplay = true
+
+[node name="heart_container" parent="." instance=ExtResource("10_a0ig6")]
+position = Vector2(8, -35)
 
 [connection signal="body_entered" from="change_lvl" to="change_lvl" method="_on_body_entered"]

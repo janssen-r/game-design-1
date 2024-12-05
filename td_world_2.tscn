@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bk1i7kpcns8hk"]
+[gd_scene load_steps=16 format=4 uid="uid://bk1i7kpcns8hk"]
 
 [ext_resource type="Texture2D" uid="uid://b0ns43mf0ibdc" path="res://assets/sprites/zelda_like/gfx/cave.png" id="1_mion4"]
 [ext_resource type="PackedScene" uid="uid://751masobgewe" path="res://td_player.tscn" id="2_r26kq"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://xm1kt7jegdcc" path="res://td_enemy.tscn" id="5_4knau"]
 [ext_resource type="AudioStream" uid="uid://dbukvojkuwp2v" path="res://assets/sounds/keith.mp3" id="6_xqpua"]
 [ext_resource type="PackedScene" uid="uid://rohn6gt0208u" path="res://assets/sprites/zelda_like/gfx/entities/objects/small_chest.tscn" id="7_eifqi"]
-[ext_resource type="PackedScene" uid="uid://bmg7f5701wyby" path="res://heart_container.tscn" id="8_lt3cv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h7v3k"]
 texture = ExtResource("1_mion4")
@@ -447,9 +446,9 @@ shape = SubResource("RectangleShape2D_vjp1n")
 
 [node name="SmallChest" parent="." instance=ExtResource("7_eifqi")]
 position = Vector2(830, 515)
-
-[node name="heart_container" parent="." instance=ExtResource("8_lt3cv")]
-position = Vector2(830, 527)
+contents = {
+"heart_container": 1
+}
 
 [connection signal="body_entered" from="change_lvl" to="change_lvl" method="_on_body_entered"]
 [connection signal="body_entered" from="change_lvl2" to="change_lvl2" method="_on_body_entered"]

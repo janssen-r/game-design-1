@@ -24,13 +24,21 @@ func draw_hearts():
 func _ready() -> void:
 	draw_hearts()
 
+var old_max_health = 0
+
+
 func _process(delta: float) -> void:
 	
 	$PlayerMoney/Coins.text = "00" + str(player.data.money)
 	
+	
 	var p_health = player.data.health
 	var full_hearts = floor(p_health / 20)
 	var remainder = int(p_health) % 20
+	
+	if player.data.max_health > old_max_health:
+		old_max_health = player.data.max_health
+		draw_hearts()
 	
 	for heart in hearts.get_children():
 		var index = heart.get_index()
